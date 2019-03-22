@@ -1,16 +1,10 @@
-import web 
-import config as config
+import config
 
 class Index:
 
-	def __init__(self):
-		pass
+    def __init__(self):
+        pass
 
-
-	def GET(self):
-		contactos = config.model_contactos.select_contactos().list() # selecciona todos los registros usando el archivo importado config
-		return config.render.index(contactos)
-
-
-
-
+    def GET(self):
+        result = config.model.get_all_contactos()
+        return config.render.index(result)

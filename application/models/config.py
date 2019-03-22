@@ -1,12 +1,14 @@
-import web 
+import web
 
-
+db_host = 'localhost'
+db_name = 'agenda'
+db_user = 'root'
+db_pw = ''
 
 db = web.database(
-	dbn = 'mysql',  # motor de base de datos
-	host = 'localhost',
-	db = 'agenda',
-	user = 'root',
-	pw = '', # contrasena
-	port = 3306 #puerto de mariadb
-	)
+    dbn='mysql',
+    host=db_host,
+    db=db_name,
+    user=db_user,
+    pw=db_pw
+    )

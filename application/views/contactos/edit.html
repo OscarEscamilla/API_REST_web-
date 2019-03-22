@@ -1,0 +1,26 @@
+$def with(contacto)
+<h3>
+    <a href="/products">Contacto</a>
+</h3>
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="id_contacto" id="id_products" value="$contacto.id_contacto" />
+    <div class="form-group">
+        <label>Nombre<label>
+        <input  id="product" type="text" class="form-control" name="nombre" size="30" value="$contacto.nombre" />
+    </div>
+    <div class="form-group">
+        <label>Telefono</label>
+        <input id="stock" type="text" class="form-control" name="telefono" size="30" value="$contacto.telefono" />
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input  id="description" type="text" class="form-control" name="email" size="30" value="$contacto.email"
+        />
+    </div>
+    <div class="form-group">
+        <label></label>
+        <button id="send" name="send" class="form-control">Edit</button>
+    </div>
+</form>
+<br>
+<br>

@@ -1,21 +1,30 @@
 $def with(datos)
 
-<div class="container">
+<div class="container"> 
 
 <h1>Actualizar contacto</h1>
  <form method="POST">
+
+    <div class="form-group">
+    <label for="id_contacto">ID</label>
+    <input type="text" name="id_contacto" id="id_contacto"   value="$datos.id_contacto" readonly="true" class="form-control">
+    </div>
+
     <div class="form-group">
     <label for="nombre">Nombre</label>
-    <input type="text" name="nombre" id="nombre"   value="$datos.nombre" readonly="true" class="form-control">
-</div>
+    <input type="text" name="nombre" id="nombre"   value="$datos.nombre" class="form-control">
+    </div>
+
     <div class="form-group">
     <label for="telefono">Telefono</label>
     <input type="text" name="telefono" id="telefono"  value="$datos.telefono"  class="form-control">
-</div>
+    </div>
+
     <div class="form-group">
     <label for="email">Email</label>
     <input type="email" name="email" id="email" value="$datos.email" class="form-control" >
-</div>
+    </div>
+    
     <button type="submit" class="btn btn-dark">Actualizar</button>
 
 

@@ -1,45 +1,25 @@
-$def with(datos)
-
-
-<div class="container">
-<div class="row">
-	<div class="col-md-12">
-		
-	
-	<h1>Contactos</h1>
-
-<div class="table-responsive">
-<caption>Lista de contactos</caption>
-<table class="table">
-	<thead class="thead-dark">
-	<th class="col">Nombre</th>
-	<th class="col">Telefono</th>
-	<th class="col">Email</th>
-	<th class="col">Update</th>
-	<th class="col">Delete</th>
-	<th class="col">View</th>
-	</thead>
-	$for row in datos:
-		<tr>
-			<td>$row.nombre</td>
-			<td>$row.telefono</td>
-			<td>$row.email</td>
-			<td><a href="/update/$row.nombre">Update</a></td>
-			<td><a href="/delete/$row.nombre">Delete</a></td>
-			<td><a href="/view/$row.nombre">View</a></td>
-		</tr>
-	
+$def with(contactos)
+<h3>
+    <a >Contactos</a>
+</h3>
+<table id="datos_tabla" class="table table-hover" cellspacing="0" width="100%">
+    <thead>
+        <th>Contacto</th>
+        <th>Telefono</th>
+        <th>Email</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </thead>
+    <tbody>
+        $for item in contactos:
+        <tr>
+            <td><a href='/contactos/view/$item.id_contacto'>$item.nombre</a></td>
+             <td><a href='/contactos/view/$item.id_contacto'>$item.telefono</a></td>
+              <td><a href='/contactos/view/$item.id_contacto'>$item.email</a></td>
+            <td><a href='/contactos/edit/$item.id_contacto'><span class="glyphicon glyphicon-pencil"></span></a></td>
+            <td><a href='/contactos/delete/$item.id_contacto'><span class="glyphicon glyphicon-trash"></span></a></td>
+        </tr>
+    </tbody>
 </table>
-</div>
-<center>
-	
-	<a href="/insert" class="btn btn-primary">insertar nuevo</a>
-</center>
-
-
-
-
-	</div>
-	</div>
-</div>
-
+<br>
+<br>
